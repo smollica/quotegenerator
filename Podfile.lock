@@ -1,0 +1,10 @@
+PODS:
+  - Nuke (3.0.0)
+
+DEPENDENCIES:
+  - Nuke
+
+SPEC CHECKSUMS:
+  Nuke: 0bf58cc17da620fbfd9ecf67a2dd8d65ed50635e
+
+COCOAPODS: 0.39.0
