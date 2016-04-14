@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2FF6C94A47474DAB4898D04D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891A5068E8F53D7461C0EA74 /* Pods.framework */; };
 		E53971311CBEEFA600692544 /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E53971301CBEEFA600692544 /* download.jpeg */; };
-		E53971331CBEF6C800692544 /* CompositionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53971321CBEF6C800692544 /* CompositionDelegate.swift */; };
 		E5E3615E1CBEC88D00DD643C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E3615D1CBEC88D00DD643C /* AppDelegate.swift */; };
 		E5E361631CBEC88D00DD643C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5E361611CBEC88D00DD643C /* Main.storyboard */; };
 		E5E361651CBEC88D00DD643C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E361641CBEC88D00DD643C /* Assets.xcassets */; };
@@ -30,7 +29,6 @@
 		891A5068E8F53D7461C0EA74 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1529F1187E4250D0CE1A4F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E53971301CBEEFA600692544 /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpeg; sourceTree = "<group>"; };
-		E53971321CBEF6C800692544 /* CompositionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionDelegate.swift; sourceTree = "<group>"; };
 		E5E3615A1CBEC88C00DD643C /* QuoteGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuoteGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E3615D1CBEC88D00DD643C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5E361621CBEC88D00DD643C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 				E5E361771CBECB5200DD643C /* Composition.swift */,
 				E5E361731CBEC9A600DD643C /* Quote.swift */,
 				E5E361751CBECB2000DD643C /* Photo.swift */,
-				E53971321CBEF6C800692544 /* CompositionDelegate.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -284,7 +281,6 @@
 				E5E3615E1CBEC88D00DD643C /* AppDelegate.swift in Sources */,
 				E5E3617E1CBED03A00DD643C /* BuilderViewController.swift in Sources */,
 				E5E361781CBECB5200DD643C /* Composition.swift in Sources */,
-				E53971331CBEF6C800692544 /* CompositionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

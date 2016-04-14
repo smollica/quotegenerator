@@ -7,9 +7,12 @@
 //
 
 import UIKit
-import Nuke
 
-class BuilderViewController: UIViewController, CompositionDelegate {
+protocol BuilderViewControllerDelegate: class {
+    func newComp(comp: Composition)
+}
+
+class BuilderViewController: UIViewController {
     
     // MARK: Outlets
     
@@ -18,6 +21,7 @@ class BuilderViewController: UIViewController, CompositionDelegate {
     // MARK: Properties
     
     var composition = Composition()
+    weak var delegate: BuilderViewControllerDelegate?
     
     // MARK: ViewDidLoad
 
@@ -45,17 +49,18 @@ class BuilderViewController: UIViewController, CompositionDelegate {
     }
     
     @IBAction func saveButtonPressed(sender: AnyObject) {
-        performSegueWithIdentifier("return", sender: self.composition)
+        self.navigationController!.popViewControllerAnimated(true)
+        self.delegate!.newComp(composition)
     }
     
     // MARK: Segue
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "return" {
-            let controller = segue.destinationViewController as! QuoteListViewController
-            controller.compositions.append(self.composition)
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "return" {
+//            let controller = segue.destinationViewController as! QuoteListViewController
+//            controller.compositions.append(self.composition)
+//        }
+//    }
     
     // MARK: Helper Functions
     

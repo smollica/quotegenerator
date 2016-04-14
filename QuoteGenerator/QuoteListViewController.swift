@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuoteListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class QuoteListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, BuilderViewControllerDelegate {
     
     // MARK: Outlets
     
@@ -26,12 +26,17 @@ class QuoteListViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
         
-        self.createTokenComposition()
+        createTokenComposition()
     }
+    
+//    override func viewWillAppear(animated: Bool) {
+//        tableView.reloadData()
+//    }
     
     // MARK: UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return compositions.count
     }
     
@@ -72,7 +77,18 @@ class QuoteListViewController: UIViewController, UITableViewDelegate, UITableVie
                 let controller = segue.destinationViewController as! DetailViewController
                 controller.composition = composition
             }
+        } else if segue.identifier == "addComposition" {
+            let controller = segue.destinationViewController as! BuilderViewController
+            controller.delegate = self
         }
+    }
+    
+    // MARK: BuilderProtocol
+    
+    func newComp(comp: Composition) {
+        compositions.append(comp)
+        
+        tableView.reloadData()
     }
     
     // MARK: Helper Methods

@@ -17,7 +17,6 @@ class DetailViewController: UIViewController {
     // MARK: Properties
     
     var composition = Composition()
-    var delegate = CompositionDelegate.self
     
     // MARK: ViewDidLoad
     

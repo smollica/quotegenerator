@@ -18,18 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="42" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RzL-Aj-Ebb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="42" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RzL-Aj-Ebb">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="quoteCell" rowHeight="42" id="T2t-k4-Im5" customClass="QuoteTableViewCell" customModule="QuoteGenerator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="42"/>
+                                        <rect key="frame" x="0.0" y="92" width="320" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T2t-k4-Im5" id="du4-nz-s5C">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="T2t-k4-Im5" id="du4-nz-s5C">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="niF-ih-WxZ">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="niF-ih-WxZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="0Np-Zc-2cR"/>
@@ -54,7 +54,7 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y6-wq-Qej">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y6-wq-Qej">
                                                     <rect key="frame" x="70" y="0.0" width="52" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="am2-RW-Rkc"/>
@@ -62,7 +62,7 @@
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFk-Fb-zTc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFk-Fb-zTc">
                                                     <rect key="frame" x="70" y="20" width="240" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -133,7 +133,7 @@
                     <navigationItem key="navigationItem" id="vP0-Fh-Jfo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="A6s-rf-44i">
                             <connections>
-                                <segue destination="Oj8-cL-w1N" kind="show" id="I5I-Dd-J0x"/>
+                                <segue destination="Oj8-cL-w1N" kind="show" identifier="addComposition" id="I5I-Dd-J0x"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -186,7 +186,7 @@
                                     <action selector="saveButtonPressed:" destination="Oj8-cL-w1N" eventType="touchUpInside" id="4uw-zw-IEG"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfZ-hc-Kb9">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfZ-hc-Kb9">
                                 <rect key="frame" x="20" y="84" width="280" height="384"/>
                                 <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -212,7 +212,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="xibView" destination="zfZ-hc-Kb9" id="12Y-sS-hmY"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="return" id="nPw-Yk-HhB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsU-RJ-bDb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,7 +242,7 @@
                                     <action selector="publishButtonPressed:" destination="bUf-yQ-8DZ" eventType="touchUpInside" id="pYY-F1-s9i"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjy-3m-dEl">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yjy-3m-dEl">
                                 <rect key="frame" x="20" y="84" width="280" height="384"/>
                                 <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -293,7 +292,4 @@
             <point key="canvasLocation" x="637" y="337"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="nPw-Yk-HhB"/>
-    </inferredMetricsTieBreakers>
 </document>
